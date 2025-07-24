@@ -1,10 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Проекты — Стройнефтесервис</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/projects.css">
 </head>
 <body>
-
+<nav>
+    <div class="container nav-flex">
+        <div class="logo-wrap">
+            <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f477.svg" alt="Логотип" class="logo-img">
+            <span class="logo-title">ТОО «Стройнефтесервис»</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Главная</a></li>
+            <li><a href="services.html" class="nav-link">Услуги</a></li>
+            <li><a href="projects.html" class="nav-link active">Проекты</a></li>
+            <li><a href="aboutUs.html" class="nav-link">О компании</a></li>
+            <li><a href="contact.html" class="nav-link">Контакты</a></li>
+        </ul>
+    </div>
+</nav>
+<main>
+    <section class="projects-header">
+        <div class="container">
+            <h1>Проекты</h1>
+            <p>Наши реализованные объекты и ключевые кейсы для ведущих предприятий нефтегазовой, химической и энергетической отрасли Казахстана.</p>
+        </div>
+    </section>
+    <section class="projects-list fade-in">
+        <div class="container">
+            <div id="projectsGrid" class="projects-grid"></div>
+        </div>
+    </section>
+</main>
+<div id="projectOverlay" class="overlay">
+    <div class="overlay-content">
+        <span id="closeOverlay" class="close-btn">&times;</span>
+        <div class="overlay-info">
+            <h2 id="overlayTitle"></h2>
+            <p class="overlay-client"><strong>Заказчик:</strong> <span id="overlayClient"></span></p>
+            <p class="overlay-period"><strong>Период:</strong> <span id="overlayPeriod"></span></p>
+            <div class="overlay-desc" id="overlayDesc"></div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        ТОО «Стройнефтесервис» &copy; 2025 | toostroynefteservis@gmail.com | +7-701-769-41-46
+    </div>
+</footer>
+<script src="js/projects.js"></script>
+<script src="js/common.js"></script>
 </body>
 </html>

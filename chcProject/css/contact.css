@@ -1,0 +1,141 @@
+.contacts-header {
+    background: #f4f7fb;
+    border-radius: 0 0 18px 18px;
+    padding: 38px 0 24px 0;
+    text-align: center;
+}
+.contacts-header h1 {
+    color: #1569aa;
+    font-size: 2.2em;
+    margin-bottom: 8px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+}
+.contacts-header p {
+    color: #224063;
+    font-size: 1.18em;
+    margin-top: 8px;
+    margin-bottom: 0;
+    letter-spacing: 0.01em;
+}
+.contacts-main {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(40, 120, 180, 0.08);
+    margin: 32px 0 0 0;
+    padding: 38px 0 40px 0;
+}
+.contacts-flex {
+    display: grid;
+    grid-template-columns: 390px 1fr 260px;
+    gap: 0 65px;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1550px;
+    margin: 0 auto;
+}
+.contacts-info {
+    /* ничего лишнего */
+}
+.contacts-info h2 {
+    color: #1569aa;
+    font-size: 1.23em;
+    margin-bottom: 11px;
+}
+.contacts-info-inner h3 {
+    margin: 0 0 5px 0;
+    font-size: 1em;
+    color: #1569aa;
+}
+.contacts-info p, .contacts-info a {
+    color: #224063;
+    font-size: 1.1em;
+    line-height: 1.4;
+}
+.contacts-map-col {
+    justify-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contacts-map-col .map-title {
+    color: #1569aa;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+.map-box {
+    border-radius: 11px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(21,120,183,0.09);
+    margin-bottom: 18px;
+}
+.btn-2gis {
+    display: inline-block;
+    background: #19b37e;
+    color: #fff;
+    padding: 11px 27px 11px 16px;
+    font-weight: 700;
+    border-radius: 8px;
+    font-size: 1.06em;
+    margin-top: 8px;
+    text-decoration: none;
+    box-shadow: 0 2px 9px rgba(30, 200, 120, 0.08);
+    transition: background .15s, transform .12s;
+}
+.btn-2gis:hover {
+    background: #16a36e;
+    transform: translateY(-2px) scale(1.03);
+}
+.contacts-socials {
+    justify-self: end;
+    width: 260px;
+    min-width: 180px;
+    max-width: 280px;
+    text-align: center;
+}
+.contacts-socials h2 {
+    color: #1569aa;
+    font-size: 1.14em;
+    margin-bottom: 13px;
+}
+.social-btn {
+    display: block;
+    width: 90%;
+    min-width: 180px;
+    max-width: 230px;
+    margin: 0 auto 16px auto;
+    padding: 13px 0;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.13em;
+    letter-spacing: 0.03em;
+    transition: box-shadow .13s, transform .13s;
+    text-decoration: none;
+    box-shadow: 0 1px 7px rgba(21, 120, 183, 0.09);
+}
+.social-btn.facebook   { background: #2060c7; }
+.social-btn.instagram  { background: #ea4b8c; }
+.social-btn.threads    { background: #222; }
+.social-btn.telegram   { background: #2797e7; }
+.social-btn.whatsapp   { background: #19b37e; }
+.social-btn:hover {
+    box-shadow: 0 5px 17px rgba(21, 120, 183, 0.15);
+    transform: translateY(-2px) scale(1.05);
+}
+.social-btn.twogis { background: #35b963; }
+.social-btn.twogis:hover { background: #22964a; }
+
+@media (max-width: 1400px) {
+    .contacts-flex { grid-template-columns: 1fr 1.5fr 1fr; gap: 0 25px;}
+}
+@media (max-width: 1100px) {
+    .contacts-flex { grid-template-columns: 1fr; gap: 0;}
+    .contacts-map-col,
+    .contacts-info,
+    .contacts-socials { justify-self: stretch; max-width: 100%; }
+    .contacts-map-col { align-items: stretch; }
+    .map-box { margin-left: auto; margin-right: auto; }
+}

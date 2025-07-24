@@ -56,7 +56,6 @@ nav {
     background: #105d8c;
     font-weight: 700;
 }
-
 footer {
     background: #18363c;
     color: #d1e9fa;
@@ -65,4 +64,31 @@ footer {
     font-size: 1.05em;
     margin-top: 60px;
     letter-spacing: 0.02em;
+}
+.btn {
+    padding: 13px 36px;
+    border-radius: 8px;
+    font-size: 1.16em;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(21,120,183,0.09);
+    transition: background 0.2s, color 0.2s;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 5px;
+}
+.btn-primary {
+    background: #1578b7;
+    color: #fff;
+}
+.btn-primary:hover { background: #125a8b;}
+.btn-secondary {
+    background: #fff;
+    color: #1578b7;
+    border: 2px solid #1578b7;
+}
+.btn-secondary:hover {
+    background: #eaf2fa;
+    color: #0b3558;
 }

@@ -5,6 +5,99 @@
     <title>Главная — Стройнефтесервис</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
+    <style>
+        .about-main {
+            background: #f5f8fd;
+            border-radius: 20px;
+            margin-top: 42px;
+            padding: 50px 0 40px 0;
+            box-shadow: 0 2px 18px rgba(30,90,120,0.07);
+        }
+        .about-main .about-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+        .about-main .about-text {
+            flex: 2 1 350px;
+            font-size: 1.13em;
+            color: #173d55;
+        }
+        .about-main .about-imgs {
+            flex: 1 1 270px;
+            display: flex;
+            gap: 20px;
+        }
+        .about-main .about-imgs img {
+            width: 180px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(60,80,120,0.07);
+        }
+
+        .main-benefits {
+            margin: 44px 0 0 0;
+            padding: 0 0 30px 0;
+        }
+        .benefits-row {
+            display: flex;
+            gap: 42px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .benefit {
+            background: #eaf6fd;
+            border-radius: 14px;
+            padding: 32px 26px;
+            text-align: center;
+            min-width: 190px;
+            box-shadow: 0 2px 18px rgba(21,120,183,0.07);
+            flex: 1 1 200px;
+        }
+        .benefit-icon {
+            font-size: 2.4em;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .benefit-title {
+            font-weight: 700;
+            color: #1569aa;
+            margin-bottom: 6px;
+            font-size: 1.15em;
+        }
+        .benefit-desc {
+            color: #315576;
+            font-size: 1em;
+        }
+        .main-gallery {
+            margin-top: 45px;
+            text-align: center;
+        }
+        .gallery-row {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .gallery-row img {
+            width: 220px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(60,80,120,0.09);
+            margin-bottom: 10px;
+        }
+        .gallery-caption {
+            color: #166aa6;
+            font-size: 1.08em;
+        }
+        @media (max-width: 900px) {
+            .about-main .about-row, .gallery-row, .benefits-row { flex-direction: column; align-items: center; }
+            .about-main .about-imgs { justify-content: center; }
+        }
+    </style>
 </head>
 <body>
 <nav>
@@ -24,7 +117,8 @@
 </nav>
 
 <main>
-    <section class="hero">
+    <!-- Герой-блок -->
+    <section class="hero fade-in">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <h1>Кадры решают всё</h1>
@@ -36,20 +130,80 @@
         </div>
     </section>
 
-    <section class="about-short">
+    <!-- О компании + фото -->
+    <section class="about-main fade-in">
+        <div class="container about-row">
+            <div class="about-text">
+                <h2 style="color:#1569aa;margin-bottom:14px;">О компании</h2>
+                <p>
+                    <b>ТОО «Стройнефтесервис»</b> — строительная и инжиниринговая компания, оказывающая комплексные услуги для нефтегазовой, химической и строительной отраслей.<br>
+                    <br>
+                    Мы обладаем всеми необходимыми производственными и кадровыми ресурсами для реализации проектов любого уровня сложности — от инженерного сопровождения до монтажа и сервисного обслуживания.<br>
+                    <br>
+                    <b>20+ лет опыта, более 120 реализованных проектов, сотни довольных заказчиков по всей стране.</b>
+                </p>
+            </div>
+            <div class="about-imgs">
+                <img src="https://static.tildacdn.com/tild3936-6566-4266-b533-616334313661/3d-plant.jpg" alt="Объект компании">
+                <img src="https://static.tildacdn.com/tild6534-3365-4563-a363-373433613539/cefh.png" alt="Монтажные работы">
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="main-benefits fade-in">
         <div class="container">
-            <h2>О компании</h2>
-            <p>ТОО «Стройнефтесервис» — строительно-инжиниринговая компания, оказывающая комплексные услуги по монтажу, ремонту, диагностике и сервисному обслуживанию промышленных объектов.<br>
-                Мы специализируемся на нефтегазовой, химической и строительной отраслях. Современное оборудование, опытные специалисты и соблюдение сроков — наш ключ к вашему успеху.</p>
-            <a href="aboutUs.html" class="btn btn-secondary">Подробнее о компании</a>
+            <div class="benefits-row">
+                <div class="benefit">
+                    <span class="benefit-icon">👷‍♂️</span>
+                    <div class="benefit-title">Квалифицированная команда</div>
+                    <div class="benefit-desc">Инженеры и специалисты с опытом работ в крупнейших проектах Казахстана</div>
+                </div>
+                <div class="benefit">
+                    <span class="benefit-icon">⚡</span>
+                    <div class="benefit-title">Современное оборудование</div>
+                    <div class="benefit-desc">Техника и лаборатории — соответствие отраслевым стандартам</div>
+                </div>
+                <div class="benefit">
+                    <span class="benefit-icon">🛡️</span>
+                    <div class="benefit-title">Безопасность и ответственность</div>
+                    <div class="benefit-desc">Соблюдаем все нормы и сроки, гарантируем результат</div>
+                </div>
+                <div class="benefit">
+                    <span class="benefit-icon">🏆</span>
+                    <div class="benefit-title">120+ проектов</div>
+                    <div class="benefit-desc">Масштабные объекты по всей стране, работа “под ключ”</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея объектов (фото) -->
+    <section class="main-gallery fade-in">
+        <div class="container">
+            <div class="gallery-row">
+                <div>
+                    <img src="https://img.freepik.com/free-photo/industrial-factory_1359-260.jpg" alt="Промышленный объект">
+                    <div class="gallery-caption">Современные производственные объекты</div>
+                </div>
+                <div>
+                    <img src="https://img.freepik.com/free-photo/industrial-landscape_1359-255.jpg" alt="Монтаж">
+                    <div class="gallery-caption">Монтаж и сервисное обслуживание</div>
+                </div>
+                <div>
+                    <img src="https://img.freepik.com/free-photo/factory-worker_1359-273.jpg" alt="Работаем с 2000 года">
+                    <div class="gallery-caption">Работаем по всей стране с 2000 года</div>
+                </div>
+            </div>
         </div>
     </section>
 </main>
 
 <footer>
     <div class="container">
-        ТОО «Стройнефтесервис» &copy; 2025 | info@chc.kz | +7 (7172) 000-000
+        ТОО «Стройнефтесервис» &copy; 2025 | toostroynefteservis@gmail.com | +7-701-769-41-46
     </div>
 </footer>
+<script src="js/common.js"></script>
 </body>
 </html>

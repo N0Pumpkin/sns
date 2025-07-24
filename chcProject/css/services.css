@@ -1,55 +1,99 @@
 .services-header {
-    background: #f2f6fa;
-    padding: 46px 0 24px 0;
+    background: #edf3fa;
     border-radius: 0 0 18px 18px;
-    margin-bottom: 32px;
+    padding: 38px 0 24px 0;
+    text-align: center;
 }
 .services-header h1 {
     color: #1569aa;
-    font-size: 2.4em;
-    font-weight: 700;
-    margin-bottom: 14px;
+    font-size: 2.2em;
+    margin-bottom: 8px;
+    font-weight: 800;
 }
 .services-header p {
-    color: #294c64;
-    font-size: 1.22em;
+    color: #365779;
+    font-size: 1.18em;
 }
 
-.services-list .container {
-    padding-bottom: 44px;
+/* --- Блок "Почему выбирают нас" --- */
+.why-choose-us {
+    margin: 0;
+    background: #f4f8fd;
+    border-radius: 18px;
+    padding: 48px 0 44px 0;
+    margin-top: 44px;
+    margin-bottom: 32px;
 }
+.why-title {
+    text-align: center;
+    color: #1771d6;
+    font-size: 2em;
+    font-weight: 800;
+    margin-bottom: 28px;
+}
+.why-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px 36px;
+    justify-content: center;
+    align-items: center;
+}
+.why-card {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(10,40,80,0.07);
+    border-radius: 12px;
+    padding: 26px 38px;
+    min-width: 280px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #165082;
+}
+.why-icon {
+    font-size: 2em;
+    margin-right: 6px;
+}
+
+/* --- Грид услуг --- */
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 32px;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
 }
 .service-card {
     background: #fff;
-    border-radius: 14px;
-    box-shadow: 0 2px 20px rgba(21,120,183,0.08);
-    padding: 36px 28px 30px 28px;
-    transition: box-shadow .19s, transform .16s, background .14s;
-    cursor: pointer;
+    border-radius: 13px;
+    box-shadow: 0 2px 16px rgba(40, 120, 180, 0.09);
+    padding: 38px 30px 32px 30px;
+    width: 330px;
+    min-height: 220px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    transition: box-shadow 0.17s, transform 0.18s;
+    position: relative;
 }
 .service-card:hover {
-    background: #eaf2fa;
-    box-shadow: 0 8px 30px rgba(21,120,183,0.17);
-    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 8px 30px rgba(40,120,180,0.16);
+    transform: translateY(-4px) scale(1.035);
+    background: #f2f8fc;
 }
 .service-icon {
-    font-size: 2.1em;
-    margin-bottom: 18px;
+    font-size: 2em;
+    margin-bottom: 16px;
 }
 .service-card h2 {
-    color: #125a8b;
-    font-size: 1.23em;
+    font-size: 1.22em;
+    color: #1569aa;
     font-weight: 700;
-    margin-bottom: 13px;
+    margin-bottom: 12px;
 }
 .service-card p {
-    color: #22344b;
-    font-size: 1.08em;
+    font-size: 1.06em;
+    color: #284255;
 }

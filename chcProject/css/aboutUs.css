@@ -1,0 +1,117 @@
+.about-header {
+    background: #edf3fa;
+    border-radius: 0 0 18px 18px;
+    padding: 38px 0 18px 0;
+    text-align: center;
+}
+.about-header h1 {
+    color: #1569aa;
+    font-size: 2.1em;
+    font-weight: 800;
+}
+.about-header p {
+    color: #365779;
+    font-size: 1.16em;
+    margin-bottom: 0;
+}
+
+/* Новый блок с фото */
+.about-photos {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 28px;
+    margin-bottom: 8px;
+}
+.about-photos img {
+    width: 220px;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 11px;
+    box-shadow: 0 2px 14px rgba(10, 60, 120, 0.11);
+    transition: transform 0.15s;
+}
+.about-photos img:hover {
+    transform: scale(1.03);
+}
+
+.about-highlight {
+    padding: 22px 0 5px 0;
+    background: transparent;
+}
+.about-cards {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+.highlight-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 12px rgba(21, 120, 183, 0.08);
+    padding: 22px 26px;
+    min-width: 260px;
+    max-width: 340px;
+}
+.highlight-icon {
+    font-size: 2.2em;
+    margin-top: 2px;
+}
+.highlight-title {
+    font-weight: 700;
+    font-size: 1.14em;
+    color: #1569aa;
+}
+.highlight-desc {
+    color: #365779;
+    font-size: 0.98em;
+    margin-top: 2px;
+}
+
+.about-details {
+    background: #f4f7fb;
+    padding: 42px 0 44px 0;
+    border-radius: 18px;
+    margin-top: 28px;
+}
+.about-details h2 {
+    color: #1569aa;
+    font-size: 1.2em;
+    margin-bottom: 9px;
+}
+.about-columns {
+    display: flex;
+    gap: 52px;
+    margin: 32px 0 12px 0;
+    flex-wrap: wrap;
+}
+.about-col {
+    flex: 1 1 260px;
+}
+.about-col ul {
+    margin-top: 8px;
+    margin-bottom: 22px;
+}
+.about-col li {
+    color: #284255;
+    font-size: 1.04em;
+    margin-bottom: 6px;
+}
+.about-mission {
+    margin-top: 24px;
+    padding: 18px 20px 12px 20px;
+    background: #eaf2fa;
+    border-radius: 11px;
+}
+.about-mission h2 {
+    font-size: 1.14em;
+    margin-bottom: 5px;
+}
+.about-mission p {
+    color: #2d3d50;
+    margin: 0;
+    font-size: 1.07em;
+}
