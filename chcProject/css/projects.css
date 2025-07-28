@@ -73,12 +73,14 @@
 .overlay-content {
     background: #fff;
     border-radius: 13px;
-    padding: 36px 30px 30px 30px;
+    padding: 36px 52px 30px 30px; /* Справа больше отступа под кнопку */
     box-shadow: 0 6px 32px rgba(21,120,183,0.21);
     max-width: 480px;
     width: 98vw;
     position: relative;
     animation: fadeInOverlay 0.2s;
+    word-break: break-word;
+    min-width: 0;
 }
 @keyframes fadeInOverlay {
     from { opacity: 0; transform: scale(0.92);}
@@ -86,12 +88,13 @@
 }
 .close-btn {
     position: absolute;
-    right: 22px;
-    top: 22px;
+    right: 18px;
+    top: 18px;
     font-size: 2em;
     color: #1578b7;
     cursor: pointer;
     transition: color .16s;
+    z-index: 2;
 }
 .close-btn:hover { color: #ef3b55;}
 .overlay-info h2 {
@@ -107,4 +110,35 @@
     color: #14344b;
     margin-top: 18px;
     line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    .projects-header h1 {
+        font-size: 1.35em;
+    }
+    .projects-header p {
+        font-size: 1em;
+    }
+    .projects-grid {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+    }
+    .project-card {
+        width: 92vw;
+        min-width: unset;
+        max-width: 350px;
+        margin: 0 auto;
+        padding: 22px 8px 16px 8px;
+    }
+    .overlay-content {
+        padding: 18px 44px 14px 12px;
+        max-width: 98vw;
+        font-size: 0.98em;
+    }
+    .close-btn {
+        right: 8px;
+        top: 8px;
+        font-size: 1.3em;
+    }
 }

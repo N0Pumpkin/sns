@@ -4,96 +4,133 @@
     padding: 38px 0 24px 0;
     text-align: center;
 }
+
 .services-header h1 {
     color: #1569aa;
     font-size: 2.2em;
     margin-bottom: 8px;
     font-weight: 800;
 }
+
 .services-header p {
     color: #365779;
     font-size: 1.18em;
 }
 
-/* --- Блок "Почему выбирают нас" --- */
-.why-choose-us {
-    margin: 0;
-    background: #f4f8fd;
-    border-radius: 18px;
-    padding: 48px 0 44px 0;
-    margin-top: 44px;
-    margin-bottom: 32px;
-}
-.why-title {
-    text-align: center;
-    color: #1771d6;
-    font-size: 2em;
-    font-weight: 800;
-    margin-bottom: 28px;
-}
-.why-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 28px 36px;
-    justify-content: center;
-    align-items: center;
-}
-.why-card {
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(10,40,80,0.07);
-    border-radius: 12px;
-    padding: 26px 38px;
-    min-width: 280px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    font-size: 1.2em;
-    font-weight: 600;
-    color: #165082;
-}
-.why-icon {
-    font-size: 2em;
-    margin-right: 6px;
-}
-
-/* --- Грид услуг --- */
 .services-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 32px;
     justify-content: center;
-    margin-top: 40px;
-    margin-bottom: 50px;
+    gap: 36px;
+    margin: 40px auto 60px auto;
+    max-width: 1240px;
+    padding: 0 20px;
 }
+
 .service-card {
     background: #fff;
     border-radius: 13px;
     box-shadow: 0 2px 16px rgba(40, 120, 180, 0.09);
     padding: 38px 30px 32px 30px;
-    width: 330px;
-    min-height: 220px;
+    width: 100%;
+    max-width: 360px;
+    min-height: 280px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: flex-start;
     transition: box-shadow 0.17s, transform 0.18s;
     position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
 }
+
 .service-card:hover {
     box-shadow: 0 8px 30px rgba(40,120,180,0.16);
     transform: translateY(-4px) scale(1.035);
-    background: #f2f8fc;
 }
+
 .service-icon {
     font-size: 2em;
     margin-bottom: 16px;
 }
+
 .service-card h2 {
     font-size: 1.22em;
     color: #1569aa;
     font-weight: 700;
     margin-bottom: 12px;
 }
+
 .service-card p {
     font-size: 1.06em;
     color: #284255;
+}
+
+#card1 { background-image: url('/img/service1.png'); }
+#card2 { background-image: url('/img/service2.jpeg'); }
+#card3 { background-image: url('/img/service3.png'); }
+#card4 { background-image: url('/img/service4.png'); }
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.75);
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 13px;
+}
+
+.service-card > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* ======================= */
+/* === АДАПТИВНОСТЬ === */
+/* ======================= */
+
+/* ✅ Мобильная версия — строго по центру и одинаковая ширина */
+@media (max-width: 767px) {
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        padding: 0 16px;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* 📱 Планшеты: 2 карточки на строку */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .services-grid {
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .service-card {
+        max-width: 340px;
+    }
+}
+
+/* 🖥 ПК: 2x2 карточки по центру */
+@media (min-width: 1024px) {
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 48px 64px;
+        justify-content: center;
+    }
+
+    .service-card {
+        max-width: 100%;
+        width: 100%;
+        height: 300px;
+    }
 }

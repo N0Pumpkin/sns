@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Главная — Стройнефтесервис</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
     <style>
@@ -71,6 +72,7 @@
             color: #315576;
             font-size: 1em;
         }
+
         .main-gallery {
             margin-top: 45px;
             text-align: center;
@@ -93,13 +95,44 @@
             color: #166aa6;
             font-size: 1.08em;
         }
-        @media (max-width: 900px) {
-            .about-main .about-row, .gallery-row, .benefits-row { flex-direction: column; align-items: center; }
-            .about-main .about-imgs { justify-content: center; }
+
+        @media (max-width: 1024px) {
+            .about-main .about-row,
+            .gallery-row,
+            .benefits-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-main .about-imgs {
+                justify-content: center;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 12px;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
+
+<!-- Затемнение -->
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<!-- Мобильное/планшетное меню -->
+<div class="user-menu" id="userMenu">
+    <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="projects.html">Проекты</a></li>
+        <li><a href="aboutUs.html">О компании</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+    </ul>
+</div>
+
+<!-- Навигация -->
 <nav>
     <div class="container nav-flex">
         <div class="logo-wrap">
@@ -117,12 +150,12 @@
 </nav>
 
 <main>
-    <!-- Герой-блок -->
+    <!-- Герой-секция -->
     <section class="hero fade-in">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <h1>Кадры решают всё</h1>
-            <p>Строительно-инжиниринговая компания полного цикла</p>
+            <p>Строительно-инжиниринговая компания в нефтегазовом и промышленном секторах</p>
             <div class="hero-buttons">
                 <a href="services.html" class="btn btn-primary">Услуги</a>
                 <a href="projects.html" class="btn btn-secondary">Проекты</a>
@@ -130,22 +163,20 @@
         </div>
     </section>
 
-    <!-- О компании + фото -->
+    <!-- О компании -->
     <section class="about-main fade-in">
         <div class="container about-row">
             <div class="about-text">
                 <h2 style="color:#1569aa;margin-bottom:14px;">О компании</h2>
                 <p>
-                    <b>ТОО «Стройнефтесервис»</b> — строительная и инжиниринговая компания, оказывающая комплексные услуги для нефтегазовой, химической и строительной отраслей.<br>
-                    <br>
-                    Мы обладаем всеми необходимыми производственными и кадровыми ресурсами для реализации проектов любого уровня сложности — от инженерного сопровождения до монтажа и сервисного обслуживания.<br>
-                    <br>
-                    <b>20+ лет опыта, более 120 реализованных проектов, сотни довольных заказчиков по всей стране.</b>
+                    <b>ТОО «Стройнефтесервис»</b> — строительно-инжиниринговая компания, оказывающая комплексные услуги для нефтегазовой, химической и промышленных отраслей.<br><br>
+                    Мы обладаем всеми необходимыми производственными и кадровыми ресурсами для реализации проектов любого уровня сложности — от инженерного сопровождения до монтажа и сервисного обслуживания.<br><br>
+                    <b>10+ лет опыта, более десятка крупных реализованных проектов по всей стране.</b>
                 </p>
             </div>
             <div class="about-imgs">
-                <img src="https://static.tildacdn.com/tild3936-6566-4266-b533-616334313661/3d-plant.jpg" alt="Объект компании">
-                <img src="https://static.tildacdn.com/tild6534-3365-4563-a363-373433613539/cefh.png" alt="Монтажные работы">
+                <img src="img/indexmini1.JPG" alt="Объект компании">
+                <img src="img/indexmini2.JPG" alt="Монтажные работы">
             </div>
         </div>
     </section>
@@ -157,7 +188,7 @@
                 <div class="benefit">
                     <span class="benefit-icon">👷‍♂️</span>
                     <div class="benefit-title">Квалифицированная команда</div>
-                    <div class="benefit-desc">Инженеры и специалисты с опытом работ в крупнейших проектах Казахстана</div>
+                    <div class="benefit-desc">Инженеры и специалисты с опытом работ в крупнейших проектах Казахстана и СНГ</div>
                 </div>
                 <div class="benefit">
                     <span class="benefit-icon">⚡</span>
@@ -167,32 +198,32 @@
                 <div class="benefit">
                     <span class="benefit-icon">🛡️</span>
                     <div class="benefit-title">Безопасность и ответственность</div>
-                    <div class="benefit-desc">Соблюдаем все нормы и сроки, гарантируем результат</div>
+                    <div class="benefit-desc">Соблюдаем все нормы и стандарты, гарантируем результат</div>
                 </div>
                 <div class="benefit">
                     <span class="benefit-icon">🏆</span>
-                    <div class="benefit-title">120+ проектов</div>
-                    <div class="benefit-desc">Масштабные объекты по всей стране, работа “под ключ”</div>
+                    <div class="benefit-title">Реализация проектов</div>
+                    <div class="benefit-desc">Успешно реализованные объекты по всей стране</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Галерея объектов (фото) -->
+    <!-- Галерея -->
     <section class="main-gallery fade-in">
         <div class="container">
             <div class="gallery-row">
                 <div>
-                    <img src="https://img.freepik.com/free-photo/industrial-factory_1359-260.jpg" alt="Промышленный объект">
+                    <img src="img/indexmini3.jpeg" alt="Промышленный объект">
                     <div class="gallery-caption">Современные производственные объекты</div>
                 </div>
                 <div>
-                    <img src="https://img.freepik.com/free-photo/industrial-landscape_1359-255.jpg" alt="Монтаж">
-                    <div class="gallery-caption">Монтаж и сервисное обслуживание</div>
+                    <img src="img/indexmini5.jpeg" alt="Работаем с 2015 года">
+                    <div class="gallery-caption">Работаем по всей стране с 2015 года</div>
                 </div>
                 <div>
-                    <img src="https://img.freepik.com/free-photo/factory-worker_1359-273.jpg" alt="Работаем с 2000 года">
-                    <div class="gallery-caption">Работаем по всей стране с 2000 года</div>
+                    <img src="img/indexmini4.jpeg" alt="Монтаж">
+                    <div class="gallery-caption">Монтаж и сервисное обслуживание</div>
                 </div>
             </div>
         </div>
@@ -201,9 +232,10 @@
 
 <footer>
     <div class="container">
-        ТОО «Стройнефтесервис» &copy; 2025 | toostroynefteservis@gmail.com | +7-701-769-41-46
+        ТОО «Стройнефтесервис» &copy; 2025 | toostroynefteservis@gmail.com | +7-771-013-00-33
     </div>
 </footer>
+
 <script src="js/common.js"></script>
 </body>
 </html>
