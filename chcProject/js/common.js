@@ -1,37 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Гамбургер-меню
-    const navFlex = document.querySelector('.nav-flex');
-    if (!navFlex) return;
+    // Scroll эффект для header
+    const header = document.getElementById('header');
+    function updateHeader() {
+        if (window.scrollY > 60) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }
+    window.addEventListener('scroll', updateHeader);
+    updateHeader();
 
-    const burger = document.createElement('div');
-    burger.className = 'burger';
-    burger.innerHTML = '&#9776;';
-    navFlex.appendChild(burger);
+    // ======== HAMBURGER / MOBILE NAV ========
+    const burgerBtn = document.getElementById('burgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileNavBg = document.getElementById('mobileNavBg');
+    const closeBurger = document.getElementById('closeBurger');
 
-    const menuOverlay = document.createElement('div');
-    menuOverlay.className = 'menu-overlay';
-    document.body.appendChild(menuOverlay);
+    if (burgerBtn && mobileNav && mobileNavBg && closeBurger) {
+        burgerBtn.onclick = function() {
+            mobileNav.classList.add('open');
+            mobileNavBg.classList.add('show');
+            document.body.classList.add('nav-open');
+        };
+        function closeMenu() {
+            mobileNav.classList.remove('open');
+            mobileNavBg.classList.remove('show');
+            document.body.classList.remove('nav-open');
+        }
+        closeBurger.onclick = closeMenu;
+        mobileNavBg.onclick = closeMenu;
 
-    const userMenu = document.createElement('div');
-    userMenu.className = 'user-menu';
-    userMenu.innerHTML = `
-        <div class="user-menu-close">&times;</div>
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="services.html">Услуги</a></li>
-            <li><a href="projects.html">Проекты</a></li>
-            <li><a href="aboutUs.html">О компании</a></li>
-            <li><a href="contact.html">Контакты</a></li>
-        </ul>
-    `;
-    document.body.appendChild(userMenu);
-
-    const toggleMenu = (open) => {
-        userMenu.classList.toggle('open', open);
-        menuOverlay.classList.toggle('visible', open);
-    };
-
-    burger.addEventListener('click', () => toggleMenu(true));
-    menuOverlay.addEventListener('click', () => toggleMenu(false));
-    userMenu.querySelector('.user-menu-close').addEventListener('click', () => toggleMenu(false));
+        // Автоматически закрывать меню при клике на ссылку (для UX)
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.onclick = closeMenu;
+        });
+    }
 });

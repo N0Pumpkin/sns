@@ -1,196 +1,232 @@
-.contacts-header {
-    background: #f4f7fb;
-    border-radius: 0 0 18px 18px;
-    padding: 38px 0 24px 0;
+/* ===== CONTACTS.CSS ===== */
+
+/* Секция-хедер (как на проектах/услугах) */
+.contacts-header-bg {
+    width: 96vw;
+    min-width: 320px;
+    min-height: 260px;
+    margin: 0 auto 54px auto;
+    background: #eaf4fe;
+    padding: 80px 36px 40px 36px;
     text-align: center;
+    box-shadow: 0 8px 40px #3270a312, 0 1.5px 6px #1341800a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.contacts-header h1 {
-    color: #1569aa;
-    font-size: 2.2em;
-    margin-bottom: 8px;
+
+/* Заголовок и подзаголовок */
+.contacts-header-container h1 {
+    color: #2E3B4E;       /* Графитовый — цвет заголовков */
+    font-size: 2.7em;
     font-weight: 800;
-    letter-spacing: 0.02em;
-    line-height: 1.1;
-}
-.contacts-header p {
-    color: #224063;
-    font-size: 1.18em;
-    margin-top: 8px;
-    margin-bottom: 0;
+    margin: 0 0 22px;
     letter-spacing: 0.01em;
 }
-
-.contacts-main {
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 2px 12px rgba(40, 120, 180, 0.08);
-    margin: 32px 0 0 0;
-    padding: 38px 0 40px 0;
+.contacts-header-container p {
+    color: #1B2A41;       /* Тёмно-синий — основной текст */
+    font-size: 1.29em;
+    font-weight: 500;
+    max-width: 1280px;
+    margin: 0;
 }
 
+/* Основной контейнер с белым фоном */
+.contacts-content-container {
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(40, 120, 180, 0.08);
+    margin: 0 auto 40px auto;
+    max-width: 1400px;
+    padding: 38px 0 40px;
+}
+
+/* Сетка трёх колонок */
 .contacts-flex {
     display: grid;
-    grid-template-columns: 390px 1fr 260px;
-    gap: 0 65px;
+    grid-template-columns: 390px 1fr 240px;
+    gap: 0 48px;
     align-items: flex-start;
     width: 100%;
-    max-width: 1550px;
     margin: 0 auto;
+    padding: 0 32px;
+    box-sizing: border-box;
 }
 
+/* Левая колонка: информация */
 .contacts-info h2 {
-    color: #1569aa;
+    color: #2E3B4E;
     font-size: 1.23em;
     margin-bottom: 11px;
 }
-.contacts-info-inner h3 {
-    margin: 0 0 5px 0;
+.contacts-info h3 {
+    color: #2E3B4E;
     font-size: 1em;
-    color: #1569aa;
+    margin: 24px 0 5px;
 }
-.contacts-info p, .contacts-info a {
-    color: #224063;
+.contacts-info p,
+.contacts-info a {
+    color: #1B2A41;
     font-size: 1.1em;
     line-height: 1.4;
 }
+.contacts-info a {
+    text-decoration: underline;
+    transition: color 0.16s;
+}
 
+/* Центр: карта */
 .contacts-map-col {
-    justify-self: center;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .contacts-map-col .map-title {
-    color: #1569aa;
-    margin-bottom: 10px;
+    color: #2E3B4E;
     font-size: 1.1em;
+    margin-bottom: 10px;
 }
+/* Обёртка для карты */
 .map-box {
     border-radius: 11px;
     overflow: hidden;
-    box-shadow: 0 2px 12px rgba(21,120,183,0.09);
+    box-shadow: 0 2px 12px rgba(21, 120, 183, 0.09);
     margin-bottom: 18px;
 }
+.map-box iframe {
+    width: 450px;
+    height: 300px;
+    border: 0;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Правая колонка: соц-ссылки */
 .contacts-socials {
-    justify-self: end;
-    width: 260px;
-    min-width: 180px;
-    max-width: 280px;
     text-align: center;
 }
 .contacts-socials h2 {
-    color: #1569aa;
+    color: #2E3B4E;
     font-size: 1.14em;
     margin-bottom: 13px;
 }
 .social-btn {
     display: block;
-    width: 90%;
-    min-width: 180px;
-    max-width: 230px;
-    margin: 0 auto 16px auto;
+    width: 98%;
+    max-width: 220px;
+    margin: 0 auto 16px;
     padding: 13px 0;
     border-radius: 8px;
     color: #fff;
     font-weight: 700;
     font-size: 1.13em;
     letter-spacing: 0.03em;
-    transition: box-shadow .13s, transform .13s;
     text-decoration: none;
     box-shadow: 0 1px 7px rgba(21, 120, 183, 0.09);
+    transition: box-shadow .13s, transform .13s;
 }
-.social-btn.whatsapp   { background: #19b37e; }
-.social-btn.twogis { background: #35b963; }
-.social-btn.twogis:hover { background: #22964a; }
+.social-btn.whatsapp { background: #19b37e; }
+.social-btn.twogis    { background: #35b963; }
 .social-btn:hover {
     box-shadow: 0 5px 17px rgba(21, 120, 183, 0.15);
     transform: translateY(-2px) scale(1.05);
 }
+.social-btn.twogis:hover { background: #22964a; }
 
-@media (max-width: 1400px) {
-    .contacts-flex { grid-template-columns: 1fr 1.5fr 1fr; gap: 0 25px;}
-}
-
-@media (max-width: 1100px) {
+/* ===== АДАПТИВ ===== */
+@media (max-width: 950px) {
+    .contacts-header-bg {
+        padding: 34px 2vw 19px 2vw;
+        min-height: 150px;
+    }
+    .contacts-header-container h1 { font-size: 1.9em; }
+    .contacts-header-container p  { font-size: 1em; }
+    .contacts-content-container {
+        padding: 22px 0;
+    }
     .contacts-flex {
         grid-template-columns: 1fr;
         gap: 0;
+        padding: 0 6vw;
     }
-    .contacts-map-col,
-    .contacts-info,
-    .contacts-socials {
-        justify-self: stretch;
-        max-width: 100%;
+    .map-box {
+        margin: 0 auto 12px auto;
+        width: 99vw;
+        max-width: 99vw;
+        height: 140px !important;
     }
-    .contacts-map-col { align-items: stretch; }
-    .map-box { margin-left: auto; margin-right: auto; }
+    .map-box iframe {
+        width: 99vw !important;
+        max-width: 99vw;
+        min-width: 120px;
+        height: 140px !important;
+        display: block;
+        margin: 0 auto;
+    }
 }
-
-/* Мобильная версия (смартфон!) */
-@media (max-width: 800px) {
-    .contacts-main {
-        padding: 16px 0 20px 0;
-        margin: 18px 0 0 0;
-        border-radius: 11px;
+@media (max-width: 700px) {
+    .contacts-header-bg {
+        padding: 14px 2vw 7px 2vw;
+        min-height: 110px;
+        margin-top: 58px;    /* --- Смещение секции вниз под header --- */
+        margin-bottom: 15px;
     }
-    .contacts-header {
-        padding: 26px 0 14px 0;
-        border-radius: 0 0 13px 13px;
-    }
-    .contacts-header h1 {
-        font-size: 1.25em;
-    }
-    .contacts-header p {
-        font-size: 1em;
+    .contacts-header-container h1 { font-size: 1.13em; }
+    .contacts-header-container p  { font-size: 0.92em; }
+    .contacts-content-container {
+        padding: 10px 0;
+        margin: 10px 0 0;
     }
     .contacts-flex {
         display: flex;
         flex-direction: column;
         gap: 0;
-        padding: 0 4vw;
+        padding: 0 2vw;
     }
-    .contacts-info, .contacts-map-col, .contacts-socials {
-        max-width: 99vw;
-        width: 100%;
-        margin: 0 0 22px 0;
-        padding: 14px 12px 14px 12px;
-        border-radius: 10px;
-        box-shadow: 0 1px 8px rgba(21,120,183,0.07);
+    .contacts-info,
+    .contacts-map-col,
+    .contacts-socials {
         background: #fff;
-    }
-    .contacts-map-col .map-title {
-        font-size: 1.03em;
-    }
-    .contacts-info h2,
-    .contacts-socials h2 {
-        font-size: 1.1em;
-    }
-    .contacts-info-inner h3 { font-size: 1em; }
-    .map-box {
-        margin-left: auto;
-        margin-right: auto;
+        border-radius: 10px;
+        box-shadow: 0 1px 8px rgba(21, 120, 183, 0.07);
+        padding: 14px 10px;
+        margin-bottom: 22px;
         width: 100%;
-        max-width: 370px;
+    }
+    .map-box {
+        width: 320px;
+        min-width: 200px;
+        margin: 0 auto 12px 30px;
+        display: block;
     }
     .map-box iframe {
-        width: 94vw !important;
-        max-width: 360px;
+        height: 180px !important;
+        width: 320px !important;
         min-width: 160px;
-        height: 200px !important;
         display: block;
-        margin: 0 auto;
-    }
-    .contacts-socials {
-        box-shadow: none;
-        padding-bottom: 12px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 0;
     }
     .social-btn {
-        width: 98%;
-        max-width: 350px;
-        min-width: unset;
-        padding: 12px 0;
-        font-size: 1.03em;
+        width: 99%;
+        font-size: 1em;
+        padding: 11px 0;
     }
 }
 
+/* --- Подсвечивание почты и номера телефона красным --- */
+.contacts-info a[href^="mailto:"],
+.contacts-info a[href^="tel:"] {
+    color: #1B2A41;
+    text-decoration: underline;
+    transition: color 0.16s;
+    font-weight: 500;
+}
+
+.contacts-info a[href^="mailto:"]:hover,
+.contacts-info a[href^="tel:"]:hover {
+    color: #e52628;
+    cursor: pointer;
+}

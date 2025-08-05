@@ -8,91 +8,170 @@
     <link rel="stylesheet" href="css/aboutUs.css">
 </head>
 <body>
-<nav>
-    <div class="container nav-flex">
-        <div class="logo-wrap">
-            <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f477.svg" alt="Логотип" class="logo-img">
-            <span class="logo-title">ТОО «Стройнефтесервис»</span>
-        </div>
-        <ul class="nav-menu">
-            <li><a href="index.html" class="nav-link">Главная</a></li>
-            <li><a href="services.html" class="nav-link">Услуги</a></li>
-            <li><a href="projects.html" class="nav-link">Проекты</a></li>
-            <li><a href="aboutUs.html" class="nav-link active">О компании</a></li>
-            <li><a href="contact.html" class="nav-link">Контакты</a></li>
-        </ul>
+<header id="header" class="header">
+    <div class="header__logo">
+        <img src="img/logo.png" alt="Логотип">
     </div>
-</nav>
+    <button class="burger-btn" id="burgerBtn" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="mainNav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="aboutUs.html" class="nav-link active">О компании</a>
+        <a href="services.html" class="nav-link">Услуги</a>
+        <a href="projects.html" class="nav-link">Проекты</a>
+        <a href="contact.html" class="nav-link">Контакты</a>
+        <a href="tel:+77057814484" class="nav-link nav-link-contact">+7 705 781 44 84</a>
+    </nav>
+    <nav class="mobile-nav" id="mobileNav">
+        <button class="close-btn" id="closeBurger" aria-label="Закрыть меню">&times;</button>
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="aboutUs.html" class="nav-link active">О компании</a>
+        <a href="services.html" class="nav-link">Услуги</a>
+        <a href="projects.html" class="nav-link">Проекты</a>
+        <a href="contact.html" class="nav-link">Контакты</a>
+        <a href="tel:+77057814484" class="nav-link nav-link-contact">+7 705 781 44 84</a>
+    </nav>
+    <div class="mobile-nav-bg" id="mobileNavBg"></div>
+</header>
+
 <main>
-    <section class="about-main fade-in">
-        <div class="container about-container">
-            <h1 class="about-title">О компании</h1>
-            <p class="about-subtitle">10+ лет работы, сотни реализованных проектов и ведущие специалисты отрасли</p>
+    <!-- Шапка -->
+    <section class="about-header">
+        <h1>О компании</h1>
+        <p class="about-subtitle">
+            10+ лет работы, сотни реализованных проектов и ведущие специалисты отрасли
+        </p>
+        <div class="about-mission">
+            <h2>Миссия компании</h2>
+            <p>
+                Быть надёжным партнёром для промышленного бизнеса, внедряя современные технологии,
+                обеспечивая безопасность и высокое качество выполнения работ.
+            </p>
+        </div>
+    </section>
 
-            <div class="about-mission">
-                <h2>Миссия компании</h2>
-                <p>Быть надёжным партнёром для промышленного бизнеса, внедряя современные технологии, обеспечивая безопасность и высокое качество выполнения работ.</p>
+    <!-- ТРИ КОЛОНКИ -->
+    <section class="about-columns">
+        <div class="about-col about-col-1">
+            <h3>Наши преимущества</h3>
+            <ul>
+                <li>Квалифицированная команда инженеров и специалистов</li>
+                <li>Современное оборудование и лаборатории</li>
+                <li>Опыт в реализации технологически сложных проектов</li>
+                <li>Широкая география работ — по всей РК и СНГ</li>
+                <li>Строгое соблюдение сроков и стандартов качества</li>
+                <li>Гарантия безопасности и ответственности</li>
+            </ul>
+        </div>
+        <div class="about-col about-col-2">
+            <h3>Лаборатории и сервисы</h3>
+            <ul>
+                <li>Электролаборатория и метрологическая лаборатория</li>
+                <li>Чистка, болтинг, экстракция, теплоизоляция</li>
+                <li>Антикоррозийная защита и пескоструйная обработка</li>
+                <li>Проектирование, супервайзинг, техническое обслуживание</li>
+            </ul>
+        </div>
+        <div class="about-col about-col-3">
+            <h3>Факты о нас</h3>
+            <ul>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#133740" stroke-width="2"
+                         viewBox="0 0 24 24" class="list-icon">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M6.75 2.25h10.5a2.25 2.25 0 012.25 2.25v14.25a2.25 2.25 0 01-2.25 2.25H6.75a2.25 2.25 0 01-2.25-2.25V4.5a2.25 2.25 0 012.25-2.25z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 6.75h10.5M6.75 12.75h10.5"/>
+                    </svg>
+                    28 лет на рынке
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#133740" stroke-width="2"
+                         viewBox="0 0 24 24" class="list-icon">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M17.25 6.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M2.25 21.75v-1.125a6.375 6.375 0 0112.75 0V21.75M6.75 17.25v-1.125a3.375 3.375 0 016.75 0V17.25"/>
+                    </svg>
+                    Более 1000 рабочих мест
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#133740" stroke-width="2"
+                         viewBox="0 0 24 24" class="list-icon">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M3 21h18M9 17v-4m6 4v-8m-6 8V3"/>
+                    </svg>
+                    Топ-3 мукомол Казахстана
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#133740" stroke-width="2"
+                         viewBox="0 0 24 24" class="list-icon">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M12 2.25c5.385 0 9.75 4.365 9.75 9.75s-4.365 9.75-9.75 9.75-9.75-4.365-9.75-9.75S6.615 2.25 12 2.25z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M2.25 12h19.5M12 2.25v19.5"/>
+                    </svg>
+                    148+ партнёров по РК и зарубежью
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ТРИ КАРТОЧКИ ПРЕИМУЩЕСТВ -->
+    <section class="about-cards">
+        <div class="highlight-card highlight-card-1">
+            <span class="highlight-icon">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#195a8a" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="15" width="18" height="6" rx="2"/>
+                    <path d="M6 15v-8l6-4 6 4v8"/>
+                    <path d="M6 7h12"/>
+                </svg>
+            </span>
+            <div>
+                <div class="highlight-title">Масштабные реализованные проекты</div>
+                <div class="highlight-desc">От небольших объектов до промышленных комплексов</div>
             </div>
-
-            <div class="about-columns">
-                <div class="about-col">
-                    <h3>Наши преимущества</h3>
-                    <ul>
-                        <li>Квалифицированный персонал</li>
-                        <li>Современное оборудование</li>
-                        <li>Опыт работы в технологически сложных проектах</li>
-                        <li>Соблюдение сроков</li>
-                        <li>Ответственность и безопасность</li>
-                    </ul>
-                </div>
-                <div class="about-col">
-                    <h3>Лаборатории и сервисы</h3>
-                    <ul>
-                        <li>Электролаборатория</li>
-                        <li>Метрологическая лаборатория</li>
-                        <li>Чистка, болтинг, экстракция, теплоизоляция</li>
-                        <li>Антикоррозийная защита и пескоструйная обработка</li>
-                        <li>Проектирование, супервайзинг</li>
-                    </ul>
-                </div>
+        </div>
+        <div class="highlight-card highlight-card-2">
+            <span class="highlight-icon">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#195a8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="8" r="4"/>
+                    <path d="M2 21v-2a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v2"/>
+                </svg>
+            </span>
+            <div>
+                <div class="highlight-title">Опытная команда</div>
+                <div class="highlight-desc">Только квалифицированные специалисты и инженеры</div>
             </div>
-
-            <div class="about-photos">
-                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Инженеры на заводе">
-                <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Промышленная площадка">
-            </div>
-
-            <div class="about-cards">
-                <div class="highlight-card">
-                    <span class="highlight-icon">🏗️</span>
-                    <div>
-                        <div class="highlight-title">Масштабные реализованные проекты</div>
-                        <div class="highlight-desc">От небольших объектов до промышленных комплексов</div>
-                    </div>
-                </div>
-                <div class="highlight-card">
-                    <span class="highlight-icon">👷‍♂️</span>
-                    <div>
-                        <div class="highlight-title">Опытная команда</div>
-                        <div class="highlight-desc">Только квалифицированные специалисты и инженеры</div>
-                    </div>
-                </div>
-                <div class="highlight-card">
-                    <span class="highlight-icon">🛡️</span>
-                    <div>
-                        <div class="highlight-title">Безопасность и ответственность</div>
-                        <div class="highlight-desc">Все работы ведутся с соблюдением регламентов, нормативов и стандартов РК</div>
-                    </div>
-                </div>
+        </div>
+        <div class="highlight-card highlight-card-3">
+            <span class="highlight-icon">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#195a8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2l8 4v6c0 5.55-3.84 10.74-8 12-4.16-1.26-8-6.45-8-12V6z"/>
+                </svg>
+            </span>
+            <div>
+                <div class="highlight-title">Безопасность и ответственность</div>
+                <div class="highlight-desc">Все работы ведутся с соблюдением нормативов и стандартов РК</div>
             </div>
         </div>
     </section>
+
+    <!-- ФОТОГРАФИИ -->
+    <section class="about-photos">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+             alt="Инженеры на заводе">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
+             alt="Промышленная площадка">
+    </section>
 </main>
-<footer>
-    <div class="container">
-        ТОО «Стройнефтесервис» &copy; 2025 | toostroynefteservis@gmail.com | +7-771-013-00-33
+
+<footer class="footer">
+    <div class="container footer-container">
+        ТОО «Стройнефтесервис» © 2025 | toostroynefteservis@gmail.com | +7-771-013-00-33
     </div>
 </footer>
+
 <script src="js/common.js"></script>
 </body>
 </html>

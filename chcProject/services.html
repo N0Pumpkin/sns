@@ -8,66 +8,104 @@
     <link rel="stylesheet" href="css/services.css">
 </head>
 <body>
-<nav>
-    <div class="container nav-flex">
-        <div class="logo-wrap">
-            <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f477.svg" alt="Логотип" class="logo-img">
-            <span class="logo-title">ТОО «Стройнефтесервис»</span>
-        </div>
-        <ul class="nav-menu">
-            <li><a href="index.html" class="nav-link">Главная</a></li>
-            <li><a href="services.html" class="nav-link active">Услуги</a></li>
-            <li><a href="projects.html" class="nav-link">Проекты</a></li>
-            <li><a href="aboutUs.html" class="nav-link">О компании</a></li>
-            <li><a href="contact.html" class="nav-link">Контакты</a></li>
-        </ul>
+<header id="header" class="header">
+    <div class="header__logo">
+        <img src="img/logo.png" alt="Логотип">
     </div>
-</nav>
+    <button class="burger-btn" id="burgerBtn" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="mainNav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="aboutUs.html" class="nav-link">О компании</a>
+        <a href="services.html" class="nav-link active">Услуги</a>
+        <a href="projects.html" class="nav-link">Проекты</a>
+        <a href="contact.html" class="nav-link">Контакты</a>
+        <a href="tel:+77057814484" class="nav-link nav-link-contact">+7 705 781 44 84</a>
+    </nav>
+    <nav class="mobile-nav" id="mobileNav">
+        <button class="close-btn" id="closeBurger" aria-label="Закрыть меню">&times;</button>
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="aboutUs.html" class="nav-link">О компании</a>
+        <a href="services.html" class="nav-link active">Услуги</a>
+        <a href="projects.html" class="nav-link">Проекты</a>
+        <a href="contact.html" class="nav-link">Контакты</a>
+        <a href="tel:+77057814484" class="nav-link nav-link-contact">+7 705 781 44 84</a>
+    </nav>
+    <div class="mobile-nav-bg" id="mobileNavBg"></div>
+</header>
 
 <main>
-    <section class="services-header fade-in">
-        <div class="container">
-            <h1>Наши услуги</h1>
-            <p>Комплексные услуги по проектированию, строительству, а также пусконаладочным работам для нефтеперерабатывающей и энергетической промышленности.</p>
-        </div>
+
+    <section class="services-header">
+        <h1>Наши услуги</h1>
+        <p>
+            Комплексные услуги по проектированию, строительству, а также пусконаладочным работам для нефтеперерабатывающей и энергетической промышленности.
+        </p>
     </section>
 
     <section>
-        <div class="container">
-            <div class="services-grid">
-
-                <div class="service-card" id="card1">
-                    <div class="service-icon">🛠️</div>
+        <div class="services-grid">
+            <div class="service-card">
+                <img class="service-bg" src="img/service1.png" alt="">
+                <div class="service-card-content">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#195A8A" stroke-width="2" viewBox="0 0 24 24" width="32" height="32">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M4.22 4.22a.75.75 0 011.06 0L12 10.94l6.72-6.72a.75.75 0 111.06 1.06L13.06 12l6.72 6.72a.75.75 0 11-1.06 1.06L12 13.06l-6.72 6.72a.75.75 0 11-1.06-1.06L10.94 12 4.22 5.28a.75.75 0 010-1.06z"/>
+                        </svg>
+                    </div>
                     <h2>Проектирование и инжиниринг</h2>
                     <p>Проектирование промышленных объектов, инженерное сопровождение и авторский надзор.</p>
                 </div>
-
-                <div class="service-card" id="card2">
-                    <div class="service-icon">🔧</div>
+            </div>
+            <div class="service-card">
+                <img class="service-bg" src="img/service2.jpeg" alt="">
+                <div class="service-card-content">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#195A8A" stroke-width="2" viewBox="0 0 24 24" width="32" height="32">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M15.59 2.08a1 1 0 00-1.42 0L10 6.25a9 9 0 1011 11l4.17-4.17a1 1 0 000-1.42l-1.34-1.34a1 1 0 00-1.42 0l-1.06 1.06a5 5 0 11-7.07-7.07l1.06-1.06a1 1 0 000-1.42L15.59 2.08z"/>
+                        </svg>
+                    </div>
                     <h2>Монтаж и демонтаж оборудования</h2>
                     <p>Выполняем монтаж, демонтаж, пуско-наладку технологического и энергетического оборудования.</p>
                 </div>
-
-                <div class="service-card" id="card3">
-                    <div class="service-icon">🏗️</div>
+            </div>
+            <div class="service-card">
+                <img class="service-bg" src="img/service3.png" alt="">
+                <div class="service-card-content">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#195A8A" stroke-width="2" viewBox="0 0 24 24" width="32" height="32">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M3 21h18M3 10h18M5 21V10m14 11V10M7 21V3h4v18m2 0V3h4v18"/>
+                        </svg>
+                    </div>
                     <h2>Строительство и капитальный ремонт</h2>
                     <p>Строительство промышленных объектов и ремонт оборудования: насосов, теплообменников, резервуаров, компрессоров и т.д.</p>
                 </div>
-
-                <div class="service-card" id="card4">
-                    <div class="service-icon">💻</div>
+            </div>
+            <div class="service-card">
+                <img class="service-bg" src="img/service4.png" alt="">
+                <div class="service-card-content">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#195A8A" stroke-width="2" viewBox="0 0 24 24" width="32" height="32">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
                     <h2>Электротехническая и метрологическая лаборатория</h2>
                     <p>Поверка, калибровка, испытание приборов учёта и автоматизации технологических процессов.</p>
                 </div>
-
             </div>
         </div>
+
     </section>
 </main>
 
-<footer>
-    <div class="container">
-        ТОО «Стройнефтесервис» &copy; 2025 | toostroynefteservis@gmail.com | +7-771-013-00-33
+<footer class="footer">
+    <div class="container footer-container">
+        TOO «Стройнефтесервис» © 2025 | toostroynefteservis@gmail.com | +7-771-013-00-33
     </div>
 </footer>
 

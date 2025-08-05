@@ -6,236 +6,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
-    <style>
-        .about-main {
-            background: #f5f8fd;
-            border-radius: 20px;
-            margin-top: 42px;
-            padding: 50px 0 40px 0;
-            box-shadow: 0 2px 18px rgba(30,90,120,0.07);
-        }
-        .about-main .about-row {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 40px;
-        }
-        .about-main .about-text {
-            flex: 2 1 350px;
-            font-size: 1.13em;
-            color: #173d55;
-        }
-        .about-main .about-imgs {
-            flex: 1 1 270px;
-            display: flex;
-            gap: 20px;
-        }
-        .about-main .about-imgs img {
-            width: 180px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 4px 16px rgba(60,80,120,0.07);
-        }
-
-        .main-benefits {
-            margin: 44px 0 0 0;
-            padding: 0 0 30px 0;
-        }
-        .benefits-row {
-            display: flex;
-            gap: 42px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .benefit {
-            background: #eaf6fd;
-            border-radius: 14px;
-            padding: 32px 26px;
-            text-align: center;
-            min-width: 190px;
-            box-shadow: 0 2px 18px rgba(21,120,183,0.07);
-            flex: 1 1 200px;
-        }
-        .benefit-icon {
-            font-size: 2.4em;
-            margin-bottom: 12px;
-            display: block;
-        }
-        .benefit-title {
-            font-weight: 700;
-            color: #1569aa;
-            margin-bottom: 6px;
-            font-size: 1.15em;
-        }
-        .benefit-desc {
-            color: #315576;
-            font-size: 1em;
-        }
-
-        .main-gallery {
-            margin-top: 45px;
-            text-align: center;
-        }
-        .gallery-row {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .gallery-row img {
-            width: 220px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(60,80,120,0.09);
-            margin-bottom: 10px;
-        }
-        .gallery-caption {
-            color: #166aa6;
-            font-size: 1.08em;
-        }
-
-        @media (max-width: 1024px) {
-            .about-main .about-row,
-            .gallery-row,
-            .benefits-row {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .about-main .about-imgs {
-                justify-content: center;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                gap: 12px;
-                align-items: center;
-            }
-        }
-    </style>
 </head>
 <body>
-
-<!-- Затемнение -->
-<div class="menu-overlay" id="menuOverlay"></div>
-
-<!-- Мобильное/планшетное меню -->
-<div class="user-menu" id="userMenu">
-    <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="services.html">Услуги</a></li>
-        <li><a href="projects.html">Проекты</a></li>
-        <li><a href="aboutUs.html">О компании</a></li>
-        <li><a href="contact.html">Контакты</a></li>
-    </ul>
-</div>
-
-<!-- Навигация -->
-<nav>
-    <div class="container nav-flex">
-        <div class="logo-wrap">
-            <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f477.svg" alt="Логотип" class="logo-img">
-            <span class="logo-title">ТОО «Стройнефтесервис»</span>
-        </div>
-        <ul class="nav-menu">
-            <li><a href="index.html" class="nav-link active">Главная</a></li>
-            <li><a href="services.html" class="nav-link">Услуги</a></li>
-            <li><a href="projects.html" class="nav-link">Проекты</a></li>
-            <li><a href="aboutUs.html" class="nav-link">О компании</a></li>
-            <li><a href="contact.html" class="nav-link">Контакты</a></li>
-        </ul>
+<header id="header" class="header">
+    <div class="header__logo">
+        <img src="img/logo.png" alt="Логотип">
     </div>
-</nav>
+    <button class="burger-btn" id="burgerBtn" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="mainNav">
+        <a href="index.html" class="nav-link active">Главная</a>
+        <a href="aboutUs.html" class="nav-link">О компании</a>
+        <a href="services.html" class="nav-link">Услуги</a>
+        <a href="projects.html" class="nav-link">Проекты</a>
+        <a href="contact.html" class="nav-link">Контакты</a>
+        <a href="tel:+77057814484" class="nav-link nav-link-contact">+7 705 781 44 84</a>
+    </nav>
+    <nav class="mobile-nav" id="mobileNav">
+        <button class="close-btn" id="closeBurger" aria-label="Закрыть меню">&times;</button>
+        <a href="index.html" class="nav-link active">Главная</a>
+        <a href="aboutUs.html" class="nav-link">О компании</a>
+        <a href="services.html" class="nav-link">Услуги</a>
+        <a href="projects.html" class="nav-link">Проекты</a>
+        <a href="contact.html" class="nav-link">Контакты</a>
+        <a href="tel:+77057814484" class="nav-link nav-link-contact">+7 705 781 44 84</a>
+    </nav>
+    <div class="mobile-nav-bg" id="mobileNavBg"></div>
+</header>
 
 <main>
-    <!-- Герой-секция -->
-    <section class="hero fade-in">
-        <div class="hero-overlay"></div>
+    <section class="hero">
+        <img src="img/imgindex.jpeg" class="hero-bg" alt="hero" />
         <div class="container hero-content">
-            <h1>Кадры решают всё</h1>
-            <p>Строительно-инжиниринговая компания в нефтегазовом и промышленном секторах</p>
+            <h1>Комплексные решения для НПЗ и промышленных объектов под ключ</h1>
             <div class="hero-buttons">
-                <a href="services.html" class="btn btn-primary">Услуги</a>
-                <a href="projects.html" class="btn btn-secondary">Проекты</a>
+                <a href="services.html" class="nav-link">Услуги</a>
+                <a href="projects.html" class="nav-link">Проекты</a>
             </div>
         </div>
     </section>
 
-    <!-- О компании -->
-    <section class="about-main fade-in">
-        <div class="container about-row">
-            <div class="about-text">
-                <h2 style="color:#1569aa;margin-bottom:14px;">О компании</h2>
-                <p>
-                    <b>ТОО «Стройнефтесервис»</b> — строительно-инжиниринговая компания, оказывающая комплексные услуги для нефтегазовой, химической и промышленных отраслей.<br><br>
-                    Мы обладаем всеми необходимыми производственными и кадровыми ресурсами для реализации проектов любого уровня сложности — от инженерного сопровождения до монтажа и сервисного обслуживания.<br><br>
-                    <b>10+ лет опыта, более десятка крупных реализованных проектов по всей стране.</b>
-                </p>
+    <section class="about-main">
+        <div class="container about-block">
+            <h2>О компании</h2>
+            <p><b>ТОО «Стройнефтесервис»</b> — строительно-инжиниринговая компания, оказывающая комплексные услуги для нефтегазовой, химической и промышленных отраслей.</p>
+            <p>Мы обладаем необходимыми ресурсами для реализации проектов любого уровня сложности — от инженерного сопровождения до монтажа и сервисного обслуживания.</p>
+            <p class="about-highlight">10+ лет опыта · 50+ инженеров · 100+ реализованных проектов</p>
+        </div>
+    </section>
+
+    <section class="main-benefits">
+        <div class="container benefits-row">
+            <div class="benefit">
+                <span class="benefit-icon">
+                      <svg width="32" height="32" fill="none" stroke="#195A8A" stroke-width="2" viewBox="0 0 24 24">
+    <path d="M17 20v-2a4 4 0 0 0-3-3.87M9 20v-2a4 4 0 0 1 3-3.87m-6 5.87v-2a4 4 0 0 1 3-3.87M16 7a4 4 0 1 0-8 0 4 4 0 0 0 8 0z" />
+  </svg>
+                </span>
+                <h3 class="benefit-title">Квалифицированная команда</h3>
+                <p class="benefit-desc">Инженеры и специалисты с опытом работ в крупнейших проектах Казахстана и СНГ</p>
             </div>
-            <div class="about-imgs">
-                <img src="img/indexmini1.JPG" alt="Объект компании">
-                <img src="img/indexmini2.JPG" alt="Монтажные работы">
+            <div class="benefit">
+                <span class="benefit-icon">
+                      <svg width="32" height="32" fill="none" stroke="#195A8A" stroke-width="2" viewBox="0 0 24 24">
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+  </svg>
+                </span>
+                <h3 class="benefit-title">Современное оборудование</h3>
+                <p class="benefit-desc">Техника и лаборатории — соответствие отраслевым стандартам</p>
+            </div>
+            <div class="benefit">
+                <span class="benefit-icon">
+                      <svg width="32" height="32" fill="none" stroke="#195A8A" stroke-width="2" viewBox="0 0 24 24">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+  </svg>
+                </span>
+                <h3 class="benefit-title">Безопасность и ответственность</h3>
+                <p class="benefit-desc">Соблюдаем все нормы и стандарты, гарантируем результат</p>
+            </div>
+            <div class="benefit">
+                <span class="benefit-icon">
+                      <svg width="32" height="32" fill="none" stroke="#195A8A" stroke-width="2" viewBox="0 0 24 24">
+    <path d="M8 21h8M12 17v4M7 4V2h10v2M17 4a5 5 0 0 1 5 5c0 5.25-4 9-10 9S2 14.25 2 9a5 5 0 0 1 5-5"/>
+  </svg>
+                </span>
+                <h3 class="benefit-title">Реализация проектов</h3>
+                <p class="benefit-desc">Успешно реализованные объекты по всей стране</p>
             </div>
         </div>
     </section>
 
-    <!-- Преимущества -->
-    <section class="main-benefits fade-in">
-        <div class="container">
-            <div class="benefits-row">
-                <div class="benefit">
-                    <span class="benefit-icon">👷‍♂️</span>
-                    <div class="benefit-title">Квалифицированная команда</div>
-                    <div class="benefit-desc">Инженеры и специалисты с опытом работ в крупнейших проектах Казахстана и СНГ</div>
-                </div>
-                <div class="benefit">
-                    <span class="benefit-icon">⚡</span>
-                    <div class="benefit-title">Современное оборудование</div>
-                    <div class="benefit-desc">Техника и лаборатории — соответствие отраслевым стандартам</div>
-                </div>
-                <div class="benefit">
-                    <span class="benefit-icon">🛡️</span>
-                    <div class="benefit-title">Безопасность и ответственность</div>
-                    <div class="benefit-desc">Соблюдаем все нормы и стандарты, гарантируем результат</div>
-                </div>
-                <div class="benefit">
-                    <span class="benefit-icon">🏆</span>
-                    <div class="benefit-title">Реализация проектов</div>
-                    <div class="benefit-desc">Успешно реализованные объекты по всей стране</div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Галерея -->
-    <section class="main-gallery fade-in">
-        <div class="container">
-            <div class="gallery-row">
-                <div>
+    <section class="main-gallery">
+        <div class="container gallery-horizontal">
+            <div class="gallery-row-horizontal" id="galleryRow">
+                <div class="gallery-imgblock">
                     <img src="img/indexmini3.jpeg" alt="Промышленный объект">
                     <div class="gallery-caption">Современные производственные объекты</div>
                 </div>
-                <div>
+                <div class="gallery-imgblock">
                     <img src="img/indexmini5.jpeg" alt="Работаем с 2015 года">
                     <div class="gallery-caption">Работаем по всей стране с 2015 года</div>
                 </div>
-                <div>
+                <div class="gallery-imgblock">
                     <img src="img/indexmini4.jpeg" alt="Монтаж">
                     <div class="gallery-caption">Монтаж и сервисное обслуживание</div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="partners-section">
+        <div class="container">
+            <h2 class="partners-title">Наши партнеры</h2>
+            <div class="partners-carousel-wrapper" id="partnersWrapper">
+                <div class="partners-carousel" id="partnersCarousel">
+                    <div class="partner-card"><img src="img/partner1nobg.png" alt="Партнер 1"></div>
+                    <div class="partner-card"><img src="img/partner2nobg.png" alt="Партнер 2"></div>
+                    <div class="partner-card"><img src="img/partner3nobg.png" alt="Партнер 3"></div>
+                    <div class="partner-card"><img src="img/partner4nobg.png" alt="Партнер 4"></div>
+                    <div class="partner-card"><img src="img/partner5nobg.png" alt="Партнер 5"></div>
+                    <div class="partner-card"><img src="img/partner6.jpeg" alt="Партнер 6"></div>
+                    <div class="partner-card"><img src="img/partner7nobg.png" alt="Партнер 7"></div>
+                    <div class="partner-card"><img src="img/partner8nobg.png" alt="Партнер 8"></div>
+                    <div class="partner-card"><img src="img/partner9nobg.png" alt="Партнер 9"></div>
+                    <div class="partner-card"><img src="img/partner10nobg.png" alt="Партнер 10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
-<footer>
-    <div class="container">
-        ТОО «Стройнефтесервис» &copy; 2025 | toostroynefteservis@gmail.com | +7-771-013-00-33
+<footer class="footer">
+    <div class="container footer-container">
+        TOO «Стройнефтесервис» © 2025 | toostroynefteservis@gmail.com | +7-771-013-00-33
     </div>
 </footer>
 
+
 <script src="js/common.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>

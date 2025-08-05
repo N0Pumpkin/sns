@@ -1,185 +1,228 @@
-.about-main {
-    background: #edf3fa;
-    border-radius: 0 0 24px 24px;
-    padding: 44px 0 44px 0;
-    min-height: 100vh;
-}
-.about-container {
-    max-width: 1100px;
-    margin: 0 auto;
+/* ========================
+   aboutUs.css
+   ======================== */
+
+/* ===== ABOUT HEADER ===== */
+.about-header {
+    background: #eaf4fe;
+    width: 96vw;
+    min-width: 320px;
+    min-height: 260px;
+    margin: 0 auto 54px;
+    padding: 80px 36px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 8px 40px #3270a312, 0 1.5px 6px #1341800a;
 }
-.about-title {
-    color: #1569aa;
-    font-size: 2.4em;
+.about-header h1 {
+    color: #133740;
+    font-size: 2.7em;
     font-weight: 800;
-    text-align: center;
+    margin: 0 0 22px;
+    letter-spacing: 0.01em;
 }
-.about-subtitle {
-    color: #365779;
-    font-size: 1.2em;
-    text-align: center;
-    margin-bottom: 26px;
+.about-header .about-subtitle {
+    color: #133740;
+    font-size: 1.29em;
+    font-weight: 500;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 .about-mission {
-    width: 100%;
     background: #eaf2fa;
-    border-radius: 14px;
-    padding: 18px 18px 12px 18px;
-    margin: 0 0 32px 0;
+    border-radius: 13px;
+    padding: 18px 22px 13px;
+    margin: 24px auto 0;
+    max-width: 900px;
     text-align: center;
 }
 .about-mission h2 {
-    margin: 0 0 5px 0;
-    color: #1979b5;
+    color: #133740;
     font-size: 1.18em;
+    margin: 0 0 7px;
 }
 .about-mission p {
-    color: #1a344b;
+    color: #133740;
     margin: 0;
-    font-size: 1.05em;
+    font-size: 1em;
 }
 
+/* ===== ТРИ КОЛОНКИ ===== */
 .about-columns {
     display: flex;
-    width: 100%;
-    gap: 48px;
-    margin-bottom: 36px;
+    gap: 30px;
+    margin: 34px auto 18px;
     justify-content: center;
     flex-wrap: wrap;
+    max-width: 1340px;
 }
 .about-col {
     background: #fff;
     border-radius: 16px;
-    box-shadow: 0 2px 14px rgba(21, 120, 183, 0.08);
+    box-shadow: 0 2px 14px rgba(21,120,183,0.08);
     flex: 1 1 320px;
-    min-width: 260px;
-    max-width: 410px;
-    padding: 24px 32px 16px 32px;
+    min-width: 240px;
+    max-width: 400px;
+    padding: 19px 20px 11px;
     margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
 }
 .about-col h3 {
-    color: #1569aa;
+    color: #133740;
+    font-size: 1.09em;
     margin-bottom: 8px;
-    font-size: 1.18em;
 }
 .about-col ul {
-    margin-top: 5px;
-    margin-bottom: 0;
+    margin: 5px 0 0;
     padding-left: 18px;
 }
 .about-col li {
-    color: #284255;
-    font-size: 1.07em;
-    margin-bottom: 7px;
-}
-
-.about-photos {
     display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin: 36px 0 36px 0;
+    align-items: center;
+    gap: 8px;
+    color: #133740;
+    font-size: 1em;
+    margin-bottom: 8px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.about-col li:last-child {
+    margin-bottom: 0;
+}
+.list-icon {
+    width: 24px;
+    height: 24px;
+}
+.list-icon svg {
     width: 100%;
-}
-.about-photos img {
-    width: 320px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 13px;
-    box-shadow: 0 2px 14px rgba(10, 60, 120, 0.10);
-    transition: transform 0.14s;
-    background: #fff;
-}
-.about-photos img:hover {
-    transform: scale(1.03);
+    height: 100%;
 }
 
+/* ===== ТРИ КАРТОЧКИ ОТЛИЧИЙ ===== */
 .about-cards {
     display: flex;
+    gap: 40px;
+    margin: 34px auto 20px;
+    max-width: 1340px;
     justify-content: center;
-    gap: 28px;
-    margin-top: 10px;
-    flex-wrap: wrap;
-    width: 100%;
 }
 .highlight-card {
     display: flex;
     align-items: flex-start;
     gap: 14px;
     background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 2px 12px rgba(21, 120, 183, 0.08);
-    padding: 18px 20px 16px 20px;
-    min-width: 230px;
-    max-width: 340px;
-    flex: 1 1 220px;
+    border-radius: 16px;
+    box-shadow: 0 2px 14px rgba(21,120,183,0.08);
+    padding: 28px 19px 19px;
+    min-width: 320px;
+    max-width: 380px;
+    transition: box-shadow 0.13s, transform 0.13s;
+}
+.highlight-card:hover {
+    box-shadow: 0 7px 28px rgba(21,120,183,0.10);
+    transform: translateY(-2.5px) scale(1.014);
 }
 .highlight-icon {
-    font-size: 2.2em;
-    margin-top: 2px;
+    width: 32px;
+    height: 32px;
+}
+.highlight-icon svg {
+    width: 100%;
+    height: 100%;
 }
 .highlight-title {
+    color: #133740;
+    font-size: 1.13em;
     font-weight: 700;
-    font-size: 1.11em;
-    color: #1569aa;
+    margin-bottom: 3px;
 }
 .highlight-desc {
-    color: #365779;
-    font-size: 0.98em;
-    margin-top: 2px;
+    color: #133740;
+    font-size: 1em;
 }
 
-/* Мобильная версия */
-@media (max-width: 900px) {
-    .about-main {
-        padding: 18px 0 24px 0;
+/* ===== ФОТОГРАФИИ ===== */
+.about-photos {
+    display: flex;
+    gap: 18px;
+    margin: 25px 0 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.about-photos img {
+    width: 92vw;
+    max-width: 400px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 14px rgba(10,60,120,0.10);
+    transition: transform 0.14s;
+}
+.about-photos img:hover {
+    transform: scale(1.035);
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 950px) {
+    .about-header {
+        padding: 54px 2vw 19px;
+        min-height: 150px;
+        margin-bottom: 23px;
     }
-    .about-container {
-        padding: 0 3vw;
-    }
-    .about-columns {
-        flex-direction: column;
-        gap: 14px;
-    }
-    .about-col {
-        max-width: 98vw;
-        padding: 20px 12px 10px 12px;
-    }
-    .about-photos {
-        flex-direction: column;
-        gap: 14px;
-        margin: 18px 0 18px 0;
-        align-items: center;
-        width: 100%;
-    }
-    .about-photos img {
-        width: 98vw;
-        max-width: 370px;
-        margin: 0 auto;
-        height: 150px;
-        display: block;
-    }
+    .about-header h1 { font-size: 1.85em; }
+    .about-header .about-subtitle { font-size: 1em; }
+    .about-columns,
     .about-cards {
         flex-direction: column;
-        gap: 14px;
-        margin-top: 12px;
         align-items: center;
+        gap: 13px;
+        max-width: 99vw;
+        margin: 11px auto 7px;
+    }
+    .about-col {
+        width: 97vw;
+        padding: 11px 8px 11px;
+        font-size: 0.97em;
     }
     .highlight-card {
-        min-width: 0;
-        max-width: 99vw;
-        padding: 18px 10px 12px 10px;
-        margin: 0 auto;
+        width: 97vw;
+        padding: 13px 7px 11px;
+        min-height: unset;
+        font-size: 0.99em;
     }
-    .about-title {
-        font-size: 1.7em;
+    .highlight-icon { width: 28px; height: 28px; }
+    .highlight-title { font-size: 1.02em; }
+    .highlight-desc  { font-size: 0.97em; }
+    .about-photos {
+        flex-direction: column;
+        gap: 12px;
     }
-    .about-subtitle {
-        font-size: 1.04em;
+    .about-photos img {
+        width: 97vw;
+        height: 115px;
+        margin-bottom: 6px;
     }
-    .about-mission h2 {
-        font-size: 1.09em;
+}
+@media (max-width: 700px) {
+    .about-header {
+        padding: 36px 2vw 11px !important;
+        min-height: 110px !important;
+        margin-bottom: 12px !important;
+    }
+    .about-header h1 { font-size: 1.13em !important; }
+    .about-header .about-subtitle { font-size: 0.92em !important; }
+}
+@media (max-width: 900px) {
+    .about-header {
+        padding-top: 88px !important; /* было 68 или меньше, ставим больше */
+    }
+}
+@media (max-width: 700px) {
+    .about-header {
+        padding-top: 78px !important; /* чуть меньше на совсем мелких */
     }
 }
