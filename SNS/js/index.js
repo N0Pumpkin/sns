@@ -5,16 +5,16 @@ document.addEventListener('DOMContentLoaded', function () {
     let startX, scrollLeft;
     let isHovered = false;
 
-    // Клонируем карточки 150 раз
+
     function cloneCardsForLoop(times = 1000) {
         const originals = Array.from(carousel.children);
-        for (let t = 0; t < times - 1; t++) { // уже есть 1 оригинальный набор
+        for (let t = 0; t < times - 1; t++) {
             originals.forEach(card => {
                 carousel.appendChild(card.cloneNode(true));
             });
         }
     }
-    cloneCardsForLoop(1000); // можно больше
+    cloneCardsForLoop(1000); 
 
     // Автоскролл
     const card = carousel.querySelector('.partner-card');
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function autoScroll() {
         if (!isDown && !isHovered) {
             wrapper.scrollLeft += 1;
-            // Когда реально дошёл до конца — прыгнуть в начало
+
             if (wrapper.scrollLeft >= cardFullWidth * totalCards) {
                 wrapper.scrollLeft = 0;
             }
@@ -33,11 +33,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     autoScroll();
 
-    // Hover pause
+
     wrapper.addEventListener('mouseenter', () => { isHovered = true; });
     wrapper.addEventListener('mouseleave', () => { isHovered = false; });
 
-    // Drag'n'Drop
+
     wrapper.addEventListener('mousedown', (e) => {
         isDown = true;
         startX = e.pageX - wrapper.offsetLeft;
@@ -68,3 +68,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     wrapper.style.cursor = 'grab';
 });
+
