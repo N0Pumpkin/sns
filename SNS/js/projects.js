@@ -1,4 +1,4 @@
-// Массив всех проектов из референс-листа
+
 const projects = [
     {
         name: "Строительство объектов ОЗХ, в том числе закуп материалов и оборудования в рамках проекта по модернизации",
@@ -120,7 +120,7 @@ projects.forEach((p, idx) => {
     projectsList.appendChild(card);
 });
 
-// Overlay логика
+
 const overlay = document.getElementById('projectOverlay');
 const closeOverlayBtn = document.getElementById('closeOverlay');
 
@@ -138,3 +138,4 @@ overlay.onclick = (e) => { if (e.target === overlay) overlay.classList.remove('o
 document.addEventListener('keydown', e => {
     if (overlay.classList.contains('open') && e.key === "Escape") overlay.classList.remove('open');
 });
+
