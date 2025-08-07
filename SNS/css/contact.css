@@ -1,6 +1,4 @@
 /* ===== CONTACTS.CSS ===== */
-
-/* Секция-хедер (как на проектах/услугах) */
 .contacts-header-bg {
     width: 96vw;
     min-width: 320px;
@@ -16,23 +14,21 @@
     justify-content: center;
 }
 
-/* Заголовок и подзаголовок */
 .contacts-header-container h1 {
-    color: #2E3B4E;       /* Графитовый — цвет заголовков */
+    color: #2E3B4E;
     font-size: 2.7em;
     font-weight: 800;
     margin: 0 0 22px;
     letter-spacing: 0.01em;
 }
 .contacts-header-container p {
-    color: #1B2A41;       /* Тёмно-синий — основной текст */
+    color: #1B2A41;    
     font-size: 1.29em;
     font-weight: 500;
     max-width: 1280px;
     margin: 0;
 }
 
-/* Основной контейнер с белым фоном */
 .contacts-content-container {
     background: #fff;
     box-shadow: 0 2px 12px rgba(40, 120, 180, 0.08);
@@ -41,7 +37,6 @@
     padding: 38px 0 40px;
 }
 
-/* Сетка трёх колонок */
 .contacts-flex {
     display: grid;
     grid-template-columns: 390px 1fr 240px;
@@ -53,7 +48,6 @@
     box-sizing: border-box;
 }
 
-/* Левая колонка: информация */
 .contacts-info h2 {
     color: #2E3B4E;
     font-size: 1.23em;
@@ -75,7 +69,6 @@
     transition: color 0.16s;
 }
 
-/* Центр: карта */
 .contacts-map-col {
     text-align: center;
     display: flex;
@@ -87,7 +80,6 @@
     font-size: 1.1em;
     margin-bottom: 10px;
 }
-/* Обёртка для карты */
 .map-box {
     border-radius: 11px;
     overflow: hidden;
@@ -101,8 +93,6 @@
     display: block;
     margin: 0 auto;
 }
-
-/* Правая колонка: соц-ссылки */
 .contacts-socials {
     text-align: center;
 }
@@ -134,7 +124,6 @@
 }
 .social-btn.twogis:hover { background: #22964a; }
 
-/* ===== АДАПТИВ ===== */
 @media (max-width: 950px) {
     .contacts-header-bg {
         padding: 34px 2vw 19px 2vw;
@@ -169,7 +158,7 @@
     .contacts-header-bg {
         padding: 14px 2vw 7px 2vw;
         min-height: 110px;
-        margin-top: 58px;    /* --- Смещение секции вниз под header --- */
+        margin-top: 58px; 
         margin-bottom: 15px;
     }
     .contacts-header-container h1 { font-size: 1.13em; }
@@ -216,7 +205,6 @@
     }
 }
 
-/* --- Подсвечивание почты и номера телефона красным --- */
 .contacts-info a[href^="mailto:"],
 .contacts-info a[href^="tel:"] {
     color: #1B2A41;
@@ -230,3 +218,4 @@
     color: #e52628;
     cursor: pointer;
 }
+
