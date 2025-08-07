@@ -1,8 +1,6 @@
 /* ========================
    aboutUs.css
    ======================== */
-
-/* ===== ABOUT HEADER ===== */
 .about-header {
     background: #eaf4fe;
     width: 96vw;
@@ -50,7 +48,6 @@
     font-size: 1em;
 }
 
-/* ===== ТРИ КОЛОНКИ ===== */
 .about-columns {
     display: flex;
     gap: 30px;
@@ -102,7 +99,6 @@
     height: 100%;
 }
 
-/* ===== ТРИ КАРТОЧКИ ОТЛИЧИЙ ===== */
 .about-cards {
     display: flex;
     gap: 40px;
@@ -145,7 +141,6 @@
     font-size: 1em;
 }
 
-/* ===== ФОТОГРАФИИ ===== */
 .about-photos {
     display: flex;
     gap: 18px;
@@ -166,7 +161,6 @@
     transform: scale(1.035);
 }
 
-/* ===== АДАПТИВ ===== */
 @media (max-width: 950px) {
     .about-header {
         padding: 54px 2vw 19px;
@@ -218,26 +212,27 @@
 }
 @media (max-width: 900px) {
     .about-header {
-        padding-top: 88px !important; /* было 68 или меньше, ставим больше */
+        padding-top: 88px !important; 
     }
 }
 @media (max-width: 700px) {
     .about-header {
-        padding-top: 78px !important; /* чуть меньше на совсем мелких */
+        padding-top: 78px !important;
     }
 }
 .dotted-list {
     list-style-type: disc;
-    padding-left: 22px;   /* чтобы точки не упирались в текст */
+    padding-left: 22px;
 }
 
 .dotted-list li {
     display: list-item !important;
-    align-items: start !important;  /* уберёт смещение */
+    align-items: start !important;
     gap: 0 !important;
     font-size: 1em;
     margin-bottom: 8px;
     color: #133740;
     font-weight: 500;
     line-height: 1.4;
+
 }
