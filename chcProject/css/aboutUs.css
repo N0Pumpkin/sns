@@ -226,3 +226,18 @@
         padding-top: 78px !important; /* чуть меньше на совсем мелких */
     }
 }
+.dotted-list {
+    list-style-type: disc;
+    padding-left: 22px;   /* чтобы точки не упирались в текст */
+}
+
+.dotted-list li {
+    display: list-item !important;
+    align-items: start !important;  /* уберёт смещение */
+    gap: 0 !important;
+    font-size: 1em;
+    margin-bottom: 8px;
+    color: #133740;
+    font-weight: 500;
+    line-height: 1.4;
+}
