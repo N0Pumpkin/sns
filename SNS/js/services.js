@@ -1,4 +1,4 @@
-// Аккордеон для лабораторных услуг
+
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.acc-parent').forEach(card => {
         const toggle = card.querySelector('.acc-toggle');
@@ -9,3 +9,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
