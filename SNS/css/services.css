@@ -1,6 +1,5 @@
 /* == SERVICES.CSS == */
 
-/* HEADER БЛОК */
 .services-header {
     background: #eaf4fe;
     width: 96vw;
@@ -30,7 +29,6 @@
     margin: 0 auto;
 }
 
-/* СЕТКА КАРТОЧЕК */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -41,7 +39,6 @@
     padding: 0 20px;
 }
 
-/* КАРТОЧКА */
 .service-card {
     position: relative;
     display: flex;
@@ -75,7 +72,6 @@
     filter: brightness(1.10) saturate(1.13);
 }
 
-/* КОНТЕНТ КАРТОЧКИ */
 .service-card-content {
     position: relative;
     z-index: 2;
@@ -110,9 +106,6 @@
     margin: 0;
 }
 
-/* FOOTER (повторяется из common.css) */
-
-/* АДАПТИВ */
 @media (max-width: 1050px) {
     .services-header { padding: 34px 2vw 19px; min-height: 150px; }
     .services-header h1 { font-size: 1.9em; }
@@ -169,3 +162,4 @@
         padding-top: 78px !important;
     }
 }
+
