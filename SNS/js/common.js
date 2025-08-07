@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Scroll эффект для header
     const header = document.getElementById('header');
     function updateHeader() {
         if (window.scrollY > 60) {
@@ -11,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', updateHeader);
     updateHeader();
 
-    // ======== HAMBURGER / MOBILE NAV ========
     const burgerBtn = document.getElementById('burgerBtn');
     const mobileNav = document.getElementById('mobileNav');
     const mobileNavBg = document.getElementById('mobileNavBg');
@@ -31,9 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
         closeBurger.onclick = closeMenu;
         mobileNavBg.onclick = closeMenu;
 
-        // Автоматически закрывать меню при клике на ссылку (для UX)
         mobileNav.querySelectorAll('a').forEach(link => {
             link.onclick = closeMenu;
         });
     }
 });
+
